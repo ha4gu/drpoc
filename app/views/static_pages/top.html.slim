@@ -1,4 +1,7 @@
-h1 This is the top page!!
-p However there is nothing to say.
+h1 タスク管理
 
-= link_to "button", root_path, class: "btn btn-primary mx-2"
+ul.nav.nav-pills.nav-fill.my-2
+  li.nav-item
+    = link_to "タスク一覧", tasks_path, class: "nav-link"
+  li.nav-item
+    = link_to "タスク新規作成", new_task_path, class: "nav-link"
