@@ -1,0 +1,15 @@
+h1 Tasks#index
+p Find me in app/views/tasks/index.html.slim
+
+table.table.table-hover
+  thead.thead-default
+    tr
+      th = Task.human_attribute_name :id
+      th = Task.human_attribute_name :title
+      th = Task.human_attribute_name :created_at
+  tbody
+    - @tasks.each do |task|
+      tr
+        td = task.id
+        td = task.title
+        td = task.created_at.strftime("%Y年%m月%d日 %H:%M:%S")
