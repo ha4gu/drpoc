@@ -9,4 +9,9 @@ html
     = javascript_include_tag 'application'
   body
     .container
+      - if flash.notice.present?
+        .alert.alert-success = flash.notice
+      - if flash.alert.present?
+        .alert.alert-warning = flash.alert
+
       = yield
