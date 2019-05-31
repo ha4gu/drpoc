@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root to: "static_pages#top"
-  resources :tasks
+  resources :tasks, except: [:edit, :update]
 end
